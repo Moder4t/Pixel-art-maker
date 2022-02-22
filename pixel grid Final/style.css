@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gridSquare {
+    background-color: white;
+    border: 1px black solid;
+    box-sizing: border-box;
+    position: relative;
+    text-align: center;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    /* reference: https://web.dev/aspect-ratio/ */
+    aspect-ratio: 1;
+}
+
+#grid {
+    /* reference: https://developer.mozilla.org/fr/docs/Web/CSS/grid-template-rows */
+    grid-template-rows: repeat(var(--grid-rows), 1fr);
+    grid-template-columns: repeat(var(--grid-cols), 1fr);
+    display: grid;
+    grid-gap: 0px;
+    height: 600px;
+    width: 600px;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#colorInputDisplay {
+    display: flex;
+    flex-direction: row;
+}
+
+#erase {
+    visibility: hidden;
+}
